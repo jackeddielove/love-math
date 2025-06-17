@@ -175,6 +175,7 @@ body {
 .website {
     text-align: center;
 }
+
 a {
     text-decoration: none;
     color: var(--text-color);
