@@ -43,19 +43,22 @@ body {
     padding-bottom: 20px;
     border: 2px solid var(--border-3-color);
 }
-    .title .name .wordmark {
+
+.title .name .wordmark {
         font-size: 125px;
         font-weight: 1000;
-    }
+        line-height: .75;
+}
 
-    .title .name .subtitle {
-        font-size: 32px;
-        font-weight: 600;
-    }
+.title .name .subtitle {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+}
 
-    .title .logo img {
-        width:200px;
-    }
+.title .logo img {
+        width:250px;
+}
 
 /*links*/
 
@@ -64,14 +67,27 @@ body {
     margin-right: 55px;
 }
 
-    .links .pc {
-        display: flex;
-        justify-content: space-between;
-    }
+.links .pc {
+    display: flex;
+    justify-content: space-between;
+}
 
-    .links .mobile {
-        display: none;
-    }
+.links .mobile {
+    display: none;
+}
+
+.links .tiny_mobile {
+    display: none;
+}
+
+.row1 {
+    padding: 10px;
+    font-size: 24px;
+}
+.row2 {
+    padding: 10px;
+    font-size: 24px;
+}
 
 /*landing section*/
 
@@ -82,37 +98,16 @@ body {
     line-height: 1.5;
 }
 
-    .landing .quote {
+.landing .quote {
         padding-top: 150px;
         padding-left: 250px;
         padding-right: 250px;
         padding-bottom: 50px;
-        font-size: 32px;
         font-weight: 400;
-    }
-
-    .landing .citation {
-        font-size: 32px;
-        font-weight: 600;
-    }
-
-/*book now*/
-
-.button {
-    display: flex;
-    justify-content: center;
 }
-.buttonText {
-    width:fit-content;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    border: 2px solid var(--border-3-color);
-    border-radius: 20px;
-    font-size: 32px;
-    font-weight: 600;
+
+.landing .citation {
+        font-weight:550;
 }
 
 /*section headings*/
@@ -123,25 +118,30 @@ body {
     justify-content: space-between;
 }
 
-    .heading .section {
+.heading .section {
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 0;
         margin-left: 55px;
-    }
+}
 
-    .heading img {
+.heading img {
         width: 200px;
         margin-top: 10px;
         margin-right: 55px;
-    }
+}
 
 /*content sections*/
 
+.narrow {
+    display: none;
+}
+
 .content {
-    position: relative;
     border: 2px solid var(--border-3-color);
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     margin-left: 20px;
     margin-right: 20px;
@@ -164,16 +164,43 @@ body {
     width: 500px;
 }
 
+.column img {
+    width: 500px;
+    margin-top: 30px;
+}
+
 .email {
-    text-align: center
-;}
+    text-align: center;
+    margin-top: 20px;
+}
 
 .banner {
     text-align: center;
 }
 
+.banner img {
+    width: 200px;
+}
+
 .website {
     text-align: center;
+}
+
+/*button*/
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+.buttonText {
+    width:fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    border: 2px solid var(--border-3-color);
+    border-radius: 20px;
 }
 
 a {
@@ -193,180 +220,217 @@ p {
 
 /* responsivity */
 
-/* 1451 */
 @media (max-width: 1451px) {
-    .bio .text {
-        font-size: 24px;
+    .content {
+        padding-left: 50px;
+        padding-right: 50px;
     }
-
-    .bio .headshot img {
-        width: 23vw;
+    .column {
+        width: 500px;
     }
-
-    .artwork .pictures img {
-        width: 21vw;
-    }
-
-    .tutoring {
-        font-size: 24px;
-    }
-
-    .outreach {
-        font-size: 24px;
+    .column img {
+        width: 500px;
     }
 }
 
-/* 1273 */
-@media (max-width: 1273px) {
-    .bio .text {
-        font-size: 22px;
+@media (max-width: 1285px) {
+    .column {
+        width: 375px;
+    }
+    .column img {
+        width: 375px;
     }
 
-    .bio .headshot img {
-        width: 24vw;
-    }
-
-    .artwork .pictures img {
-        width: 20vw;
-    }
-
-    .tutoring {
-        font-size: 22px;
-    }
-
-    .outreach {
-        font-size: 22px;
-    }
-
-    .cv img {
-        width: 80vw;
+    .banner img {
+        width: 150px;
     }
 }
 
-/* 1102 */
-@media (max-width: 1102px) {
-    .bio .text {
-        font-size: 21px;
+@media (max-width: 1100px) {
+    a {
+        font-size: 28px;
+    }
+    .landing {
+        font-size: 28px;
     }
 
-    .tutoring {
-        font-size: 21px;
+    .landing .quote {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
-    .outreach {
-        font-size: 21px;
+    .heading img {
+        width: 150px;
     }
 
-    .cv img {
-        width: 85vw;
+    .column {
+        width: 350px;
+    }
+
+    .column img {
+        width: 350px;
+    }
+
+    .buttonText {
+        width:fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 30px;
+        border: 2px solid var(--border-3-color);
+        border-radius: 20px;
+    }
+
+    .banner img {
+        width: 125px;
     }
 }
 
 /* 934 */
 @media (max-width: 934px) {
-    .bio {
-        flex-direction: column-reverse;
+    .title {
+        padding-left: 25px;
+        padding-right: 25px;
     }
-
-    .bio .text {
+    .title .name .wordmark {
+        font-size: 100px;
+    }
+    .title .name .subtitle {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .title .logo img {
+        width: 200px;
+    }
+    .links {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    a {
+        font-size: 24px;
+    }
+    .landing {
+        font-size: 28px;
+    }
+    .landing .quote {
+        padding-top: 75px;
+    }
+    .landing .citation {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .description {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .content {
+        margin-bottom: 100px;
+        padding-top: 25px;
+    }
+    .columns {
+        display: block;
+    }
+    .column {
         width: auto;
     }
-
-    .artwork .pictures img {
-        width: 25vw;
+    .wide {
+        display: none;
     }
-
-    .tutoring {
-        flex-direction: column;
+    .narrow {
+        display: block;
+        text-align: center;
     }
-
-    .outreach {
-        flex-direction: column-reverse;
+    .links .mobile {
+        display: flex;
+        justify-content: space-between;
     }
-
-    .outreach .offerings img {
-        width: 75vw;
+    .links .pc {
+        display: none;
+    }
+    .links .tiny_mobile {
+        display: none;
     }
 }
 
 /* 822 */
 @media (max-width: 822px) {
-    a {
-        font-size: 19px;
+    .title .name .wordmark {
+        font-size: 100px;
     }
-
-    .bio .headshot img {
-        width: 35vw;
+    .title .logo img {
+        width:200px;
     }
+    .landing {
+        font-size: 28px;
+    }
+    .landing .quote {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .heading img {
+        width: 100px;
+    }
+    .banner img {
+        width:70px;
+    }
+}
 
+/* 600 */
+@media (max-width: 600px) {
+    .title {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .links {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
     .links .pc {
         display: none;
     }
-    
     .links .mobile {
+        display: none;
+    }
+    .links .tiny_mobile {
+        margin-top: 20px;
+        text-align: center;
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-between;
     }
-
-    .cv img {
-        width: 80vw;
+    .landing {
+        font-size: 24px;
+    }
+    .landing .citation {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .column img {
+        width: 250px;
+    }
+    .heading .section {
+        margin-left: 30px;
+    }
+    .heading img {
+        margin-right: 30px;
+    }
+    .content {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .description {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .email a {
+        font-size: 18px;
+    }
+    .website a {
+        font-size: 18px;
     }
 }
 
-/* 606 */
-@media (max-width: 606px) {
 
-    a {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .bio .headshot img {
-        width: 45vw;
-    }
-
-    .artwork .pictures img {
-        width: 33vw;
-    }
-
-    .outreach .offerings img {
-        margin-left: 0;
-        margin-right: 0;  
-        width: 70vw;   
-    }
-
-    .cv img {
-        width: 70vw;
-    }
-}
-
-/* 401 */
-@media (max-width: 401px) {
-    a {
-        font-size: 17px;
-    }
-
-    .bio .text {
-        font-size: 19px;
-    }
-
-    .tutoring {
-        font-size: 19px;
-    }
-
-    .outreach {
-        font-size: 19px;
-    }
-
-    .outreach .offerings img {
-        width: 60vw;   
-    }
-}
-
-/* 375 */
-@media (max-width: 375px) {
-    .artwork .pictures img {
-        width: 60vw;
-    }
-}
 
