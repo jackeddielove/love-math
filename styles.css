@@ -179,7 +179,9 @@ body {
 }
 
 .banner img {
-    width: 200px;
+    width: 190px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .website {
@@ -231,6 +233,9 @@ p {
     .column img {
         width: 500px;
     }
+    .banner img {
+        width: 175px;
+    }
 }
 
 @media (max-width: 1285px) {
@@ -243,6 +248,8 @@ p {
 
     .banner img {
         width: 150px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -284,6 +291,8 @@ p {
 
     .banner img {
         width: 125px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -351,6 +360,11 @@ p {
     .links .tiny_mobile {
         display: none;
     }
+    .banner img {
+        width: 105px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 /* 822 */
@@ -372,7 +386,9 @@ p {
         width: 100px;
     }
     .banner img {
-        width:70px;
+        width: 65px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
